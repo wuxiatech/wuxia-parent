@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.wuxia.parent</groupId>
 	<artifactId>parent2017</artifactId>
-	<version>1.4.0</version>
+	<version>1.4.1</version>
 	<packaging>pom</packaging>
 	<name>WUXIA Parent</name>
 	<modules>
@@ -56,6 +56,7 @@
 		<commons-collections4.version>4.1</commons-collections4.version>
 		<commons-codec.version>1.10</commons-codec.version>
 		<commons-beanutils.version>1.9.3</commons-beanutils.version>
+		<commons-text.version>1.1</commons-text.version>
 		<guava.version>22.0</guava.version>
 		<httpclient.version>4.5.3</httpclient.version>
 		<httpcore.version>4.4.6</httpcore.version>
@@ -549,6 +550,14 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-text</artifactId>
+				<version>${commons-text.version}</version>
+			</dependency>
+
+
 			<!-- JSON begin -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
@@ -800,6 +809,7 @@
 				<groupId>com.thimbleware.jmemcached</groupId>
 				<artifactId>jmemcached-core</artifactId>
 				<version>1.0.0</version>
+				<optional>true</optional>
 			</dependency>
 			<!-- ehcache -->
 			<dependency>
