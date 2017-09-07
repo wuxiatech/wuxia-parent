@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.wuxia.parent</groupId>
 	<artifactId>parent2017</artifactId>
-	<version>1.4.1</version>
+	<version>1.4.2</version>
 	<packaging>pom</packaging>
 	<name>WUXIA Parent</name>
 	<modules>
-		<module>../wuxia-common</module>
+		<!-- <module>../wuxia-common</module>
 		<module>../wuxia-weixin-api</module>
-		<module>../wuxia-epay</module>
+		<module>../wuxia-epay</module> -->
 		<!-- <module>../wuxia-cas</module> -->
 	</modules>
 	<!-- Version Setting -->
