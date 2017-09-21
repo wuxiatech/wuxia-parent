@@ -4,15 +4,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.wuxia.parent</groupId>
 	<artifactId>parent2017</artifactId>
-	<version>1.4.2</version>
+	<version>1.4.3</version>
 	<packaging>pom</packaging>
 	<name>WUXIA Parent</name>
-	<modules>
-		<!-- <module>../wuxia-common</module>
-		<module>../wuxia-weixin-api</module>
-		<module>../wuxia-epay</module> -->
+	 <modules>
+		<module>../wuxia-common</module> 
+		<module>../wuxia-weixin-api</module> 
+		<module>../wuxia-epay</module>
 		<!-- <module>../wuxia-cas</module> -->
-	</modules>
+	</modules> 
 	<!-- Version Setting -->
 	<properties>
 		<!-- about spring -->
@@ -27,11 +27,13 @@
 		<proxool.version>0.9.1</proxool.version>
 		<spring-data-mongodb.version>1.10.4.RELEASE</spring-data-mongodb.version>
 		<spring-data-jpa.version>1.11.4.RELEASE</spring-data-jpa.version>
+		<spring-data-commons.version>1.13.4.RELEASE</spring-data-commons.version>
 		<mysql.version>6.0.6</mysql.version>
 		<commons-dbcp2.version>2.1.1</commons-dbcp2.version>
 		<commons-pool2.version>2.4.2</commons-pool2.version>
 		<mongo-java-driver.version>3.4.2</mongo-java-driver.version>
 		<c3p0.version>0.9.5.2</c3p0.version>
+		<atomikos-transactions.version>4.0.4</atomikos-transactions.version>
 		<tomcat-jdbc.version>8.0.45</tomcat-jdbc.version>
 
 		<!-- about security -->
@@ -328,7 +330,11 @@
 				<artifactId>spring-data-jpa</artifactId>
 				<version>${spring-data-jpa.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-commons</artifactId>
+				<version>${spring-data-commons.version}</version>
+			</dependency>
 			<!-- spring orm -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -372,6 +378,32 @@
 				<groupId>com.mchange</groupId>
 				<artifactId>c3p0</artifactId>
 				<version>${c3p0.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.atomikos/transactions -->
+			<dependency>
+				<groupId>com.atomikos</groupId>
+				<artifactId>transactions</artifactId>
+				<version>${atomikos-transactions.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.atomikos</groupId>
+				<artifactId>transactions-jta</artifactId>
+				<version>${atomikos-transactions.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.atomikos</groupId>
+				<artifactId>transactions-jdbc</artifactId>
+				<version>${atomikos-transactions.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.atomikos</groupId>
+				<artifactId>transactions-hibernate3</artifactId>
+				<version>${atomikos-transactions.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>jta</artifactId>
+				<version>1.1</version>
 			</dependency>
 			<!-- PERSISTENCE end -->
 
@@ -924,7 +956,28 @@
 				<artifactId>aliyun-sdk-mns</artifactId>
 				<version>${aliyun-mns.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>${zookeeper_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.sgroschupf</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient_version}</version>
+			</dependency>
+			<!-- Kyro序列化 -->
+			<dependency>
+				<groupId>de.javakaffee</groupId>
+				<artifactId>kryo-serializers</artifactId>
+				<version>0.41</version>
+			</dependency>
+			<!-- FST序列化 -->
+			<dependency>
+				<groupId>de.ruedigermoeller</groupId>
+				<artifactId>fst</artifactId>
+				<version>2.48</version>
+			</dependency>
 			<!-- alibaba dubbo -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
@@ -944,16 +997,6 @@
 			<!-- end alibaba dubbo -->
 
 			<!-- dangdang dubbox -->
-			<dependency>
-				<groupId>org.apache.zookeeper</groupId>
-				<artifactId>zookeeper</artifactId>
-				<version>${zookeeper_version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.sgroschupf</groupId>
-				<artifactId>zkclient</artifactId>
-				<version>${zkclient_version}</version>
-			</dependency>
 			<dependency>
 				<groupId>org.apache.mina</groupId>
 				<artifactId>mina-core</artifactId>
@@ -1060,6 +1103,7 @@
 				<artifactId>resteasy-jaxb-provider</artifactId>
 				<version>${resteasy.version}</version>
 			</dependency>
+			<!--end dangdang dubbox -->
 			<!-- 如果要使用tomcat server -->
 			<dependency>
 				<groupId>org.apache.tomcat.embed</groupId>
@@ -1071,20 +1115,6 @@
 				<artifactId>tomcat-embed-logging-juli</artifactId>
 				<version>${tomcat_embed_version}</version>
 			</dependency>
-			<!-- Kyro序列化 -->
-			<dependency>
-				<groupId>de.javakaffee</groupId>
-				<artifactId>kryo-serializers</artifactId>
-				<version>0.37</version>
-			</dependency>
-			<!-- FST序列化 -->
-			<dependency>
-				<groupId>de.ruedigermoeller</groupId>
-				<artifactId>fst</artifactId>
-				<version>2.43</version>
-			</dependency>
-			<!--end dangdang dubbox -->
-
 			<!-- test -->
 			<dependency>
 				<groupId>junit</groupId>
@@ -1510,7 +1540,7 @@
 			<name>Nexus Release Repository</name>
 			<url>${private.nexus.url}/repository/maven-releases/</url>
 		</repository>
-		<!-- <repository> <id>wuxia-releases</id> <name>Nexus Release Repository</name> <url>${private.nexus.url}/repository/maven-releases/</url> 
+		<!-- <repository> <id>wuxia-releases</id> <name>Nexus Release Repository</name> <url>${private.nexus.url}/repository/maven-releases/</url>
 			</repository> -->
 		<snapshotRepository>
 			<id>nexus3-snapshots</id>
