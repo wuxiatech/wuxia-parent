@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.wuxia.parent</groupId>
 	<artifactId>parent2017</artifactId>
-	<version>1.5.2</version>
+	<version>1.5.3</version>
 	<packaging>pom</packaging>
 	<name>WUXIA Parent</name>
 	<modules>
-		<module>../wuxia-common</module>
+		 <module>../wuxia-common</module>
 		<module>../wuxia-weixin-api</module>
 		<module>../wuxia-epay</module>
 		<module>../wuxia-socket</module>
