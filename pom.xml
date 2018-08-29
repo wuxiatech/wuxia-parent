@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.wuxia.parent</groupId>
-	<artifactId>parent2017</artifactId>
-	<version>1.5.3</version>
+	<artifactId>parent2018</artifactId>
+	<version>2.0.0</version>
 	<packaging>pom</packaging>
 	<name>WUXIA Parent</name>
 	<modules>
-		 <module>../wuxia-common</module>
+		<module>../wuxia-common</module>
 		<module>../wuxia-weixin-api</module>
 		<module>../wuxia-epay</module>
 		<module>../wuxia-socket</module>
@@ -17,59 +17,59 @@
 	<!-- Version Setting -->
 	<properties>
 		<!-- about spring -->
-		<spring.version>4.3.14.RELEASE</spring.version>
+		<spring.version>5.0.7.RELEASE</spring.version>
 
 		<!-- about hibernate -->
-		<hibernate.version>5.2.10.Final</hibernate.version>
-		<hibernate-ogm.version>5.1.0.Final</hibernate-ogm.version>
-		<hibernate-search.version>5.7.1.Final</hibernate-search.version>
+		<hibernate.version>5.2.17.Final</hibernate.version>
+		<hibernate-ogm.version>5.3.1.Final</hibernate-ogm.version>
+		<hibernate-search.version>5.9.2.Final</hibernate-search.version>
 
 		<!-- about db & jdbc -->
 		<proxool.version>0.9.1</proxool.version>
-		<spring-data-mongodb.version>1.10.10.RELEASE</spring-data-mongodb.version>
-		<spring-data-jpa.version>1.11.10.RELEASE</spring-data-jpa.version>
-		<spring-data-commons.version>1.13.10.RELEASE</spring-data-commons.version>
-		<spring-data-es.version>2.1.10.RELEASE</spring-data-es.version>
+		<spring-data-mongodb.version>2.0.8.RELEASE</spring-data-mongodb.version>
+		<spring-data-jpa.version>2.0.8.RELEASE</spring-data-jpa.version>
+		<spring-data-commons.version>2.0.8.RELEASE</spring-data-commons.version>
+		<spring-data-es.version>3.0.8.RELEASE</spring-data-es.version>
 		<mysql.version>6.0.6</mysql.version>
-		<commons-dbcp2.version>2.1.1</commons-dbcp2.version>
-		<commons-pool2.version>2.4.2</commons-pool2.version>
-		<mongo-java-driver.version>3.4.2</mongo-java-driver.version>
+		<commons-dbcp2.version>2.2.0</commons-dbcp2.version>
+		<commons-pool2.version>2.5.0</commons-pool2.version>
+		<mongo-java-driver.version>3.5.0</mongo-java-driver.version>
 		<c3p0.version>0.9.5.2</c3p0.version>
-		<atomikos-transactions.version>4.0.4</atomikos-transactions.version>
+		<atomikos-transactions.version>4.0.6</atomikos-transactions.version>
 		<tomcat-jdbc.version>8.0.45</tomcat-jdbc.version>
 
 		<!-- about security -->
-		<spring-security.version>4.2.4.RELEASE</spring-security.version>
-		<spring-security-cas.version>4.2.4.RELEASE</spring-security-cas.version>
-		<spring-security-oauth2.version>2.2.1.RELEASE</spring-security-oauth2.version>
+		<spring-security.version>5.0.6.RELEASE</spring-security.version>
+		<spring-security-cas.version>5.0.6.RELEASE</spring-security-cas.version>
+		<spring-security-oauth2.version>2.3.3.RELEASE</spring-security-oauth2.version>
 		<shiro.version>1.4.0</shiro.version>
 
 		<!-- about cache -->
-		<spring-data-redis.version>1.8.10.RELEASE</spring-data-redis.version>
+		<spring-data-redis.version>2.0.8.RELEASE</spring-data-redis.version>
 		<jedis.version>2.9.0</jedis.version>
 		<spymemcached.version>2.12.3</spymemcached.version>
-		<xmemcached.version>2.3.1</xmemcached.version>
+		<xmemcached.version>2.4.5</xmemcached.version>
 		<simple-spring-memcached.version>3.6.1</simple-spring-memcached.version>
-		<ehcache.version>2.9.0</ehcache.version>
+		<ehcache.version>2.10.3</ehcache.version>
 
 		<!-- about common util -->
 		<commons-lang.version>2.6</commons-lang.version>
-		<commons-lang3.version>3.6</commons-lang3.version>
-		<commons-io.version>2.5</commons-io.version>
+		<commons-lang3.version>3.7</commons-lang3.version>
+		<commons-io.version>2.6</commons-io.version>
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
-		<commons-collections4.version>4.1</commons-collections4.version>
-		<commons-codec.version>1.10</commons-codec.version>
+		<commons-collections4.version>4.2</commons-collections4.version>
+		<commons-codec.version>1.11</commons-codec.version>
 		<commons-beanutils.version>1.9.3</commons-beanutils.version>
-		<commons-text.version>1.1</commons-text.version>
+		<commons-text.version>1.4</commons-text.version>
 		<guava.version>22.0</guava.version>
-		<httpclient.version>4.5.3</httpclient.version>
-		<httpcore.version>4.4.6</httpcore.version>
+		<httpclient.version>4.5.6</httpclient.version>
+		<httpcore.version>4.4.10</httpcore.version>
 		<httpasyncclient.version>4.1.3</httpasyncclient.version>
-		<nutz.version>1.r.62</nutz.version>
+		<nutz.version>1.r.66</nutz.version>
 		<joda-time.version>2.9.9</joda-time.version>
 		<dozer.version>5.5.1</dozer.version>
-		<poi.version>3.16</poi.version>
-		<jodd.version>3.9.1</jodd.version>
+		<poi.version>3.17</poi.version>
+		<jodd.version>5.0.3</jodd.version>
 		<!-- about template -->
 		<sitemesh.version>3.0.1</sitemesh.version>
 		<freemarker.version>2.3.23</freemarker.version>
@@ -81,14 +81,14 @@
 
 
 		<!-- about json -->
-		<jackson.version>2.8.9</jackson.version>
+		<jackson.version>2.9.5</jackson.version>
 
 		<!-- about xml -->
 		<dom4j.version>1.6.1</dom4j.version>
 		<xstream.version>1.4.10</xstream.version>
 		<jdom2.version>2.0.6</jdom2.version>
 		<!-- about web -->
-		<spring-js.version>2.4.5.RELEASE</spring-js.version>
+		<spring-js.version>2.4.7.RELEASE</spring-js.version>
 		<cxf.version>3.1.12</cxf.version>
 		<cxf-rt-core.version>2.7.18</cxf-rt-core.version>
 		<servlet-api.version>3.1.0</servlet-api.version>
@@ -97,21 +97,21 @@
 		<el-api.version>3.0.0</el-api.version>
 		<resteasy.version>3.0.23.Final</resteasy.version>
 		<!-- about other -->
-		<aspectj.version>1.8.10</aspectj.version>
-		<cglib.version>3.1</cglib.version>
+		<aspectj.version>1.8.13</aspectj.version>
+		<cglib.version>3.2.5</cglib.version>
 		<assertj.version>1.6.1</assertj.version>
 		<quartz.version>2.3.0</quartz.version>
 		<validation-api.version>1.1.0.Final</validation-api.version>
-		<hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
+		<hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
 
 		<!-- about email -->
 		<javax.mail-api.version>1.5.6</javax.mail-api.version>
 		<greenmail.version>1.5.5</greenmail.version>
 
 		<!-- about aliyun -->
-		<aliyun-oss.version>2.8.1</aliyun-oss.version>
+		<aliyun-oss.version>3.1.0</aliyun-oss.version>
 		<aliyun-openservices.version>OTS-2.0.4</aliyun-openservices.version>
-		<aliyun-ons.version>1.3.2.Final</aliyun-ons.version>
+		<aliyun-ons.version>1.7.8.Final</aliyun-ons.version>
 		<aliyun-mns.version>1.1.8.4</aliyun-mns.version>
 		<!-- about test -->
 		<selenium.version>3.4.0</selenium.version>
@@ -136,7 +136,7 @@
 		<thrift_version>0.9.0</thrift_version>
 		<jfreechart_version>1.0.19</jfreechart_version>
 		<hessian_version>4.0.38</hessian_version>
-		<jcache_version>0.4</jcache_version>
+		<jcache_version>1.0.0</jcache_version>
 		<sca_version>2.0-M5.1</sca_version>
 		<guice_version>3.0</guice_version>
 		<webx_version>3.0.14</webx_version>
@@ -191,6 +191,20 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-websocket</artifactId>
 				<version>${spring.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/javax.websocket/javax.websocket-api -->
+			<dependency>
+				<groupId>javax.websocket</groupId>
+				<artifactId>javax.websocket-api</artifactId>
+				<version>1.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-websocket -->
+			<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-websocket</artifactId>
+				<version>8.5.31</version>
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -448,6 +462,7 @@
 				<artifactId>spring-js</artifactId>
 				<version>${spring-js.version}</version>
 			</dependency>
+
 
 			<!-- sitemesh -->
 			<dependency>
@@ -1044,6 +1059,32 @@
 				<artifactId>fst</artifactId>
 				<version>2.48</version>
 			</dependency>
+			<!-- google protobuf 序列化的简单实现-->
+			<!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-core -->
+			<dependency>
+				<groupId>io.protostuff</groupId>
+				<artifactId>protostuff-core</artifactId>
+				<version>1.6.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-runtime -->
+			<dependency>
+				<groupId>io.protostuff</groupId>
+				<artifactId>protostuff-runtime</artifactId>
+				<version>1.6.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java -->
+			<dependency>
+				<groupId>com.google.protobuf</groupId>
+				<artifactId>protobuf-java</artifactId>
+				<version>3.6.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.baidu</groupId>
+				<artifactId>jprotobuf</artifactId>
+				<version>2.2.1</version>
+			</dependency>
+
+
 			<!-- alibaba dubbo -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
