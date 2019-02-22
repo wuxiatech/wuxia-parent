@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.wuxia.parent</groupId>
     <artifactId>parent2018</artifactId>
-    <version>2.1.1</version>
+    <version>2.3.0</version>
     <packaging>pom</packaging>
     <name>WUXIA Parent</name>
     <url>https://github.com/wuxiatech/wuxia-parent</url>
@@ -20,62 +20,54 @@
     <!-- Version Setting -->
     <properties>
         <!-- about spring -->
-        <spring.version>5.0.7.RELEASE</spring.version>
+        <spring.version>5.0.12.RELEASE</spring.version>
 
         <!-- about hibernate -->
-        <hibernate.version>5.2.17.Final</hibernate.version>
+        <hibernate.version>5.2.18.Final</hibernate.version>
         <hibernate-ogm.version>5.3.1.Final</hibernate-ogm.version>
         <hibernate-search.version>5.9.2.Final</hibernate-search.version>
 
         <!-- about db & jdbc -->
         <proxool.version>0.9.1</proxool.version>
-        <spring-data-mongodb.version>2.0.8.RELEASE</spring-data-mongodb.version>
-        <spring-data-jpa.version>2.0.8.RELEASE</spring-data-jpa.version>
-        <spring-data-commons.version>2.0.8.RELEASE</spring-data-commons.version>
-        <spring-data-es.version>3.0.8.RELEASE</spring-data-es.version>
+        <spring-data-mongodb.version>2.0.13.RELEASE</spring-data-mongodb.version>
+        <spring-data-jpa.version>2.0.13.RELEASE</spring-data-jpa.version>
+        <spring-data-commons.version>2.0.13.RELEASE</spring-data-commons.version>
+        <spring-data-es.version>3.0.13.RELEASE</spring-data-es.version>
         <mysql.version>6.0.6</mysql.version>
-        <commons-dbcp2.version>2.2.0</commons-dbcp2.version>
-        <commons-pool2.version>2.5.0</commons-pool2.version>
+        <commons-dbcp2.version>2.6.0</commons-dbcp2.version>
+        <commons-pool2.version>2.6.1</commons-pool2.version>
         <mongo-java-driver.version>3.5.0</mongo-java-driver.version>
-        <c3p0.version>0.9.5.2</c3p0.version>
+        <c3p0.version>0.9.5.3</c3p0.version>
         <atomikos-transactions.version>4.0.6</atomikos-transactions.version>
-        <tomcat-jdbc.version>8.0.45</tomcat-jdbc.version>
+        <tomcat-jdbc.version>8.5.38</tomcat-jdbc.version>
 
         <!-- about security -->
-        <spring-security.version>5.0.6.RELEASE</spring-security.version>
-        <spring-security-cas.version>5.0.6.RELEASE</spring-security-cas.version>
+        <spring-security.version>5.0.11.RELEASE</spring-security.version>
+        <spring-security-cas.version>5.0.11.RELEASE</spring-security-cas.version>
         <spring-security-oauth2.version>2.3.3.RELEASE</spring-security-oauth2.version>
         <shiro.version>1.4.0</shiro.version>
 
-        <!-- about cache -->
-        <spring-data-redis.version>2.0.8.RELEASE</spring-data-redis.version>
-        <jedis.version>2.9.0</jedis.version>
-        <spymemcached.version>2.12.3</spymemcached.version>
-        <xmemcached.version>2.4.5</xmemcached.version>
-        <simple-spring-memcached.version>3.6.1</simple-spring-memcached.version>
-        <ehcache.version>2.10.3</ehcache.version>
-
         <!-- about common util -->
         <commons-lang.version>2.6</commons-lang.version>
-        <commons-lang3.version>3.7</commons-lang3.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
         <commons-io.version>2.6</commons-io.version>
-        <commons-fileupload.version>1.3.3</commons-fileupload.version>
-        <commons-collections4.version>4.2</commons-collections4.version>
-        <commons-codec.version>1.11</commons-codec.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
+        <commons-collections4.version>4.3</commons-collections4.version>
+        <commons-codec.version>1.12</commons-codec.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
-        <commons-text.version>1.4</commons-text.version>
+        <commons-text.version>1.6</commons-text.version>
         <guava.version>22.0</guava.version>
-        <httpclient.version>4.5.6</httpclient.version>
-        <httpcore.version>4.4.10</httpcore.version>
-        <httpasyncclient.version>4.1.3</httpasyncclient.version>
-        <nutz.version>1.r.66</nutz.version>
-        <joda-time.version>2.9.9</joda-time.version>
+        <httpclient.version>4.5.7</httpclient.version>
+        <httpcore.version>4.4.11</httpcore.version>
+        <httpasyncclient.version>4.1.4</httpasyncclient.version>
+        <nutz.version>1.r.67</nutz.version>
+        <joda-time.version>2.10.1</joda-time.version>
         <dozer.version>5.5.1</dozer.version>
-        <poi.version>3.17</poi.version>
-        <jodd.version>5.0.3</jodd.version>
+        <poi.version>4.0.1</poi.version>
+        <jodd.version>5.0.8</jodd.version>
         <!-- about template -->
         <sitemesh.version>3.0.1</sitemesh.version>
-        <freemarker.version>2.3.23</freemarker.version>
+        <freemarker.version>2.3.28</freemarker.version>
         <velocity.version>1.7</velocity.version>
 
         <!-- about logger -->
@@ -84,21 +76,21 @@
 
 
         <!-- about json -->
-        <jackson.version>2.9.5</jackson.version>
+        <jackson.version>2.9.8</jackson.version>
 
         <!-- about xml -->
         <dom4j.version>1.6.1</dom4j.version>
         <xstream.version>1.4.10</xstream.version>
         <jdom2.version>2.0.6</jdom2.version>
         <!-- about web -->
-        <spring-js.version>2.4.7.RELEASE</spring-js.version>
-        <cxf.version>3.1.12</cxf.version>
+        <spring-js.version>2.4.8.RELEASE</spring-js.version>
+        <cxf.version>3.1.18</cxf.version>
         <cxf-rt-core.version>2.7.18</cxf-rt-core.version>
         <servlet-api.version>3.1.0</servlet-api.version>
-        <jsp-api.version>2.3.1</jsp-api.version>
+        <jsp-api.version>2.3.3</jsp-api.version>
         <jstl.version>1.2</jstl.version>
         <el-api.version>3.0.0</el-api.version>
-        <resteasy.version>3.0.23.Final</resteasy.version>
+        <resteasy.version>3.0.26.Final</resteasy.version>
         <!-- about other -->
         <aspectj.version>1.8.13</aspectj.version>
         <cglib.version>3.2.5</cglib.version>
@@ -108,14 +100,10 @@
         <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
 
         <!-- about email -->
-        <javax.mail-api.version>1.5.6</javax.mail-api.version>
-        <greenmail.version>1.5.5</greenmail.version>
+        <javax.mail-api.version>1.6.2</javax.mail-api.version>
+        <greenmail.version>1.5.9</greenmail.version>
 
-        <!-- about aliyun -->
-        <aliyun-oss.version>3.1.0</aliyun-oss.version>
-        <aliyun-openservices.version>OTS-2.0.4</aliyun-openservices.version>
-        <aliyun-ons.version>1.7.8.Final</aliyun-ons.version>
-        <aliyun-mns.version>1.1.8.4</aliyun-mns.version>
+
         <!-- about test -->
         <selenium.version>3.4.0</selenium.version>
         <junit.version>4.12</junit.version>
@@ -877,65 +865,7 @@
                 <artifactId>velocity</artifactId>
                 <version>${velocity.version}</version>
             </dependency>
-            <!-- CACHE begin -->
-            <!-- memcached begin -->
-            <dependency>
-                <groupId>net.spy</groupId>
-                <artifactId>spymemcached</artifactId>
-                <version>${spymemcached.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.code.simple-spring-memcached</groupId>
-                <artifactId>spymemcached-provider</artifactId>
-                <version>${simple-spring-memcached.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.googlecode.xmemcached</groupId>
-                <artifactId>xmemcached</artifactId>
-                <version>${xmemcached.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.code.simple-spring-memcached</groupId>
-                <artifactId>xmemcached-provider</artifactId>
-                <version>${simple-spring-memcached.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.code.simple-spring-memcached</groupId>
-                <artifactId>spring-cache</artifactId>
-                <version>${simple-spring-memcached.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.thimbleware.jmemcached</groupId>
-                <artifactId>jmemcached-core</artifactId>
-                <version>1.0.0</version>
-                <optional>true</optional>
-            </dependency>
-            <!-- ehcache -->
-            <dependency>
-                <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache</artifactId>
-                <version>${ehcache.version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache-jgroupsreplication -->
-            <dependency>
-                <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache-jgroupsreplication</artifactId>
-                <version>1.7</version>
-            </dependency>
 
-
-            <!-- redis cache -->
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-redis</artifactId>
-                <version>${spring-data-redis.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>redis.clients</groupId>
-                <artifactId>jedis</artifactId>
-                <version>${jedis.version}</version>
-            </dependency>
-            <!-- CACHE end -->
             <!-- validator -->
             <dependency>
                 <groupId>org.hibernate</groupId>
@@ -1011,39 +941,6 @@
                 <artifactId>json-lib</artifactId>
                 <version>2.4</version>
                 <classifier>jdk15</classifier>
-            </dependency>
-            <!-- aliyun tools apis -->
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun-oss.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>com.aliyun.openservices</groupId>
-                <artifactId>aliyun-openservices</artifactId>
-                <version>${aliyun-openservices.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aliyun.openservices</groupId>
-                <artifactId>ons-client</artifactId>
-                <version>${aliyun-ons.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.aliyun.mns</groupId>
-                <artifactId>aliyun-sdk-mns</artifactId>
-                <version>${aliyun-mns.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
