@@ -3,18 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.wuxia.parent</groupId>
-    <artifactId>parent2018</artifactId>
+    <artifactId>parent2019</artifactId>
     <version>2.3.0</version>
     <packaging>pom</packaging>
     <name>WUXIA Parent</name>
     <url>https://github.com/wuxiatech/wuxia-parent</url>
     <modules>
         <module>../wuxia-common</module>
-        <module>../wuxia-weixin-api</module>
-        <module>../wuxia-epay</module>
-        <module>../wuxia-socket</module>
+        <module>../wuxia-cache</module>
+        <module>../wuxia-aliyun-components</module>
         <module>../wuxia-orm-hibernate5</module>
         <module>../wuxia-orm-springdata2</module>
+        <module>../wuxia-weixin-api</module>
+        <module>../wuxia-socket</module>
+        <module>../wuxia-epay</module>
         <!-- <module>../wuxia-cas</module> -->
     </modules>
     <!-- Version Setting -->
