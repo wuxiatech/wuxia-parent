@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.wuxia.parent</groupId>
     <artifactId>parent2019</artifactId>
-    <version>2.3.1</version>
+    <version>2.3.2</version>
     <packaging>pom</packaging>
     <name>WUXIA Parent</name>
     <url>https://github.com/wuxiatech/wuxia-parent</url>
@@ -19,6 +19,7 @@
         <module>../wuxia-component-cache</module>
         <module>../wuxia-component-epay</module>
         <module>../wuxia-component-email</module>
+        <module>../wuxia-dubbo</module>
         <!-- <module>../wuxia-cas</module> -->
     </modules>
     <!-- Version Setting -->
@@ -67,7 +68,7 @@
         <nutz.version>1.r.67</nutz.version>
         <joda-time.version>2.10.1</joda-time.version>
         <dozer.version>5.5.1</dozer.version>
-        <jodd.version>5.0.8</jodd.version>
+        <jodd.version>5.0.9</jodd.version>
         <!-- about template -->
         <sitemesh.version>3.0.1</sitemesh.version>
         <freemarker.version>2.3.28</freemarker.version>
@@ -80,7 +81,7 @@
 
         <!-- about json -->
         <jackson.version>2.9.8</jackson.version>
-
+        <fastjson.version>1.2.56</fastjson.version>
         <!-- about xml -->
         <dom4j.version>1.6.1</dom4j.version>
         <xstream.version>1.4.10</xstream.version>
@@ -106,7 +107,7 @@
         <javax.mail-api.version>1.6.2</javax.mail-api.version>
         <greenmail.version>1.5.9</greenmail.version>
 
-
+        <cache-api.version>1.1.0</cache-api.version>
         <!-- about test -->
         <selenium.version>3.4.0</selenium.version>
         <junit.version>4.12</junit.version>
@@ -114,28 +115,8 @@
         <dbunit.version>2.5.3</dbunit.version>
         <test.groups>All</test.groups>
 
-        <!-- about dubbox -->
-        <easymock_version>3.0</easymock_version>
-        <jmockit_version>0.999.8</jmockit_version>
-        <mina_version>1.1.7</mina_version>
-        <grizzly_version>2.1.11</grizzly_version>
-        <hessian_lite_version>3.2.1-fixed-2</hessian_lite_version>
-        <xstream_version>1.4.1</xstream_version>
-        <fastjson_version>1.2.33</fastjson_version>
-        <bsf_version>3.1</bsf_version>
-        <sorcerer_version>0.8</sorcerer_version>
-        <zookeeper_version>3.4.10</zookeeper_version>
-        <zkclient_version>0.1</zkclient_version>
-        <curator_version>2.5.0</curator_version>
-        <thrift_version>0.9.0</thrift_version>
-        <jfreechart_version>1.0.19</jfreechart_version>
-        <hessian_version>4.0.38</hessian_version>
-        <jcache_version>1.0.0</jcache_version>
-        <sca_version>2.0-M5.1</sca_version>
-        <guice_version>3.0</guice_version>
-        <webx_version>3.0.14</webx_version>
-
-        <tomcat_embed_version>8.0.33</tomcat_embed_version>
+        <zookeeper.version>3.4.10</zookeeper.version>
+        <zkclient.version>0.1</zkclient.version>
         <!-- Plugin的属性定义 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
@@ -638,6 +619,18 @@
                 <artifactId>jackson-module-jaxb-annotations</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!--json-lib -->
+            <dependency>
+                <groupId>net.sf.json-lib</groupId>
+                <artifactId>json-lib</artifactId>
+                <version>2.4</version>
+                <classifier>jdk15</classifier>
+            </dependency>
             <!-- JSON end -->
             <!-- java utils -->
             <dependency>
@@ -932,22 +925,17 @@
                 <artifactId>nutz</artifactId>
                 <version>${nutz.version}</version>
             </dependency>
-            <!--json-lib -->
-            <dependency>
-                <groupId>net.sf.json-lib</groupId>
-                <artifactId>json-lib</artifactId>
-                <version>2.4</version>
-                <classifier>jdk15</classifier>
-            </dependency>
+
+            <!-- ZOOKEEPER -->
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
-                <version>${zookeeper_version}</version>
+                <version>${zookeeper.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.sgroschupf</groupId>
                 <artifactId>zkclient</artifactId>
-                <version>${zkclient_version}</version>
+                <version>${zkclient.version}</version>
             </dependency>
             <!-- Kyro序列化 -->
             <dependency>
@@ -985,172 +973,18 @@
                 <artifactId>jprotobuf</artifactId>
                 <version>2.2.1</version>
             </dependency>
-
-
-            <!-- alibaba dubbo -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.netty</groupId>
-                        <artifactId>netty</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>commons-logging</groupId>
-                        <artifactId>commons-logging</artifactId>
-                    </exclusion>
-                </exclusions>
-                <version>2.8.4</version>
-            </dependency>
-            <!-- end alibaba dubbo -->
-
-            <!-- dangdang dubbox -->
-            <dependency>
-                <groupId>org.apache.mina</groupId>
-                <artifactId>mina-core</artifactId>
-                <version>${mina_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.grizzly</groupId>
-                <artifactId>grizzly-core</artifactId>
-                <version>${grizzly_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>hessian-lite</artifactId>
-                <version>${hessian_lite_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.bsf</groupId>
-                <artifactId>bsf-api</artifactId>
-                <version>${bsf_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jvnet.sorcerer</groupId>
-                <artifactId>sorcerer-javac</artifactId>
-                <version>${sorcerer_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.thrift</groupId>
-                <artifactId>libthrift</artifactId>
-                <version>${thrift_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jfree</groupId>
-                <artifactId>jfreechart</artifactId>
-                <version>${jfreechart_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.caucho</groupId>
-                <artifactId>hessian</artifactId>
-                <version>${hessian_version}</version>
-            </dependency>
             <dependency>
                 <groupId>javax.cache</groupId>
                 <artifactId>cache-api</artifactId>
-                <version>${jcache_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tuscany.sca</groupId>
-                <artifactId>tuscany-sca-api</artifactId>
-                <version>${sca_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.inject</groupId>
-                <artifactId>guice</artifactId>
-                <version>${guice_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.citrus</groupId>
-                <artifactId>citrus-webx-all</artifactId>
-                <version>${webx_version}</version>
+                <version>${cache-api.version}</version>
             </dependency>
 
-            <!-- TODO move versions into properties -->
-            <dependency>
-                <groupId>javax.ws.rs</groupId>
-                <artifactId>javax.ws.rs-api</artifactId>
-                <version>2.0.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jaxrs</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-client</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!-- 如果要使用netty server -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-netty</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!-- 如果要使用Sun HTTP server -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jdk-http</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!-- 如果要使用json序列化 -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jackson-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!-- 如果要使用xml序列化 -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jaxb-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!--end dangdang dubbox -->
-            <!-- 如果要使用tomcat server -->
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-core</artifactId>
-                <version>${tomcat_embed_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-logging-juli</artifactId>
-                <version>${tomcat_embed_version}</version>
-            </dependency>
+
             <!-- test -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.easymock</groupId>
-                <artifactId>easymock</artifactId>
-                <version>${easymock_version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.googlecode.jmockit</groupId>
-                <artifactId>jmockit</artifactId>
-                <version>${jmockit_version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.easymock</groupId>
-                <artifactId>easymockclassextension</artifactId>
-                <version>${easymock_version}</version>
                 <scope>test</scope>
             </dependency>
 
@@ -1533,9 +1367,9 @@
 
 
         <!--<repository>-->
-            <!--<id>repository.jboss.org</id>-->
-            <!--<name>https://repository.jboss.org/nexus/content/groups/public/</name>-->
-            <!--<url>https://repository.jboss.org/nexus/content/groups/public/</url>-->
+        <!--<id>repository.jboss.org</id>-->
+        <!--<name>https://repository.jboss.org/nexus/content/groups/public/</name>-->
+        <!--<url>https://repository.jboss.org/nexus/content/groups/public/</url>-->
         <!--</repository>-->
 
         <repository>
