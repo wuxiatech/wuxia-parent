@@ -76,7 +76,7 @@
 
         <!-- about logger -->
         <logback.version>1.2.3</logback.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <slf4j.version>1.7.26</slf4j.version>
 
 
         <!-- about json -->
@@ -99,7 +99,7 @@
         <aspectj.version>1.8.13</aspectj.version>
         <cglib.version>3.2.5</cglib.version>
         <assertj.version>1.6.1</assertj.version>
-        <quartz.version>2.3.0</quartz.version>
+        <quartz.version>2.3.1</quartz.version>
         <validation-api.version>1.1.0.Final</validation-api.version>
         <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
 
@@ -120,8 +120,6 @@
         <!-- Plugin的属性定义 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
-        <!-- <private.nexus.url>http://114.215.237.104:8081</private.nexus.url> -->
-        <private.nexus.url>http://192.168.1.10:8081</private.nexus.url>
     </properties>
 
     <!-- Dependency Setting -->
@@ -1400,8 +1398,6 @@
             <id>rdc-releases</id>
             <url>https://repo.rdc.aliyun.com/repository/29962-release-ablYFt/</url>
         </repository>
-        <!-- <repository> <id>wuxia-releases</id> <name>Nexus Release Repository</name> <url>${private.nexus.url}/repository/maven-releases/</url>
-            </repository> -->
         <snapshotRepository>
             <id>rdc-snapshots</id>
             <url>https://repo.rdc.aliyun.com/repository/29962-snapshot-54IdqK/</url>
