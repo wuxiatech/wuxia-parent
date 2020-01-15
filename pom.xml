@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.wuxia.parent</groupId>
-    <artifactId>parent2019</artifactId>
-    <version>2.3.9</version>
+    <artifactId>parent2020</artifactId>
+    <version>2.4.0</version>
     <packaging>pom</packaging>
     <name>WUXIA Parent</name>
     <url>https://github.com/wuxiatech/wuxia-parent</url>
@@ -22,61 +22,60 @@
     </modules>
     <!-- Version Setting -->
     <properties>
-        <wuxia-common.version>2.3.9</wuxia-common.version>
-        <wuxia-aliyun-components.version>2.3.9</wuxia-aliyun-components.version>
-        <wuxia-orm-hibernate.version>2.3.9</wuxia-orm-hibernate.version>
-        <wuxia-orm-springdata.version>2.3.9</wuxia-orm-springdata.version>
-        <wuxia-component-cache.version>2.3.9</wuxia-component-cache.version>
-        <wuxia-component-epay.version>2.3.9</wuxia-component-epay.version>
-        <wuxia-component-email.version>2.3.9</wuxia-component-email.version>
-        <wuxia-weixin-api.version>2.3.9</wuxia-weixin-api.version>
-        <wuxia-tools-socket.version>2.3.9</wuxia-tools-socket.version>
-        <wuxia-tools-officesuite.version>2.3.9</wuxia-tools-officesuite.version>
+        <wuxia-common.version>2.4.0</wuxia-common.version>
+        <wuxia-aliyun-components.version>2.4.0</wuxia-aliyun-components.version>
+        <wuxia-orm-hibernate.version>2.4.0</wuxia-orm-hibernate.version>
+        <wuxia-orm-springdata.version>2.4.0</wuxia-orm-springdata.version>
+        <wuxia-component-cache.version>2.4.0</wuxia-component-cache.version>
+        <wuxia-component-epay.version>2.4.0</wuxia-component-epay.version>
+        <wuxia-component-email.version>2.4.0</wuxia-component-email.version>
+        <wuxia-weixin-api.version>2.4.0</wuxia-weixin-api.version>
+        <wuxia-tools-socket.version>2.4.0</wuxia-tools-socket.version>
+        <wuxia-tools-officesuite.version>2.4.0</wuxia-tools-officesuite.version>
         <!-- about spring -->
-        <spring.version>5.0.12.RELEASE</spring.version>
+        <spring.version>5.0.15.RELEASE</spring.version>
 
         <!-- about hibernate -->
         <hibernate.version>5.2.18.Final</hibernate.version>
         <hibernate-ogm.version>5.3.1.Final</hibernate-ogm.version>
-        <hibernate-search.version>5.9.2.Final</hibernate-search.version>
 
         <!-- about db & jdbc -->
         <proxool.version>0.9.1</proxool.version>
-        <spring-data-mongodb.version>2.0.13.RELEASE</spring-data-mongodb.version>
-        <spring-data-jpa.version>2.0.13.RELEASE</spring-data-jpa.version>
-        <spring-data-commons.version>2.0.13.RELEASE</spring-data-commons.version>
-        <spring-data-es.version>3.0.13.RELEASE</spring-data-es.version>
+        <spring-data-mongodb.version>2.0.14.RELEASE</spring-data-mongodb.version>
+        <spring-data-jpa.version>2.0.14.RELEASE</spring-data-jpa.version>
+        <spring-data-commons.version>2.0.14.RELEASE</spring-data-commons.version>
+        <spring-data-es.version>3.0.14.RELEASE</spring-data-es.version>
         <mysql.version>6.0.6</mysql.version>
-        <commons-dbcp2.version>2.6.0</commons-dbcp2.version>
-        <commons-pool2.version>2.6.1</commons-pool2.version>
+        <commons-dbcp2.version>2.7.0</commons-dbcp2.version>
+        <commons-pool2.version>2.7.0</commons-pool2.version>
         <mongo-java-driver.version>3.5.0</mongo-java-driver.version>
-        <c3p0.version>0.9.5.3</c3p0.version>
+        <c3p0.version>0.9.5.5</c3p0.version>
         <atomikos-transactions.version>4.0.6</atomikos-transactions.version>
         <tomcat-jdbc.version>8.5.38</tomcat-jdbc.version>
 
         <!-- about security -->
-        <spring-security.version>5.0.11.RELEASE</spring-security.version>
-        <spring-security-cas.version>5.0.11.RELEASE</spring-security-cas.version>
-        <spring-security-oauth2.version>2.3.4.RELEASE</spring-security-oauth2.version>
-        <shiro.version>1.4.0</shiro.version>
+        <spring-security.version>5.0.13.RELEASE</spring-security.version>
+        <spring-security-cas.version>5.0.13.RELEASE</spring-security-cas.version>
+        <spring-security-oauth2.version>2.3.8.RELEASE</spring-security-oauth2.version>
+        <shiro.version>1.4.2</shiro.version>
 
         <!-- about common util -->
         <commons-lang.version>2.6</commons-lang.version>
-        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
         <commons-io.version>2.6</commons-io.version>
         <commons-fileupload.version>1.4</commons-fileupload.version>
         <commons-collections4.version>4.3</commons-collections4.version>
-        <commons-codec.version>1.12</commons-codec.version>
-        <commons-beanutils.version>1.9.3</commons-beanutils.version>
-        <commons-text.version>1.6</commons-text.version>
+        <commons-codec.version>1.13</commons-codec.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-text.version>1.8</commons-text.version>
         <guava.version>22.0</guava.version>
-        <httpclient.version>4.5.7</httpclient.version>
-        <httpcore.version>4.4.11</httpcore.version>
+        <httpclient.version>4.5.10</httpclient.version>
+        <httpcore.version>4.4.13</httpcore.version>
         <httpasyncclient.version>4.1.4</httpasyncclient.version>
-        <nutz.version>1.r.67</nutz.version>
-        <joda-time.version>2.10.1</joda-time.version>
+        <nutz.version>1.r.68.v20191031</nutz.version>
+        <joda-time.version>2.10.5</joda-time.version>
         <dozer.version>5.5.1</dozer.version>
-        <jodd.version>5.0.9</jodd.version>
+        <jodd.version>5.0.13</jodd.version>
         <!-- about template -->
         <sitemesh.version>3.0.1</sitemesh.version>
         <freemarker.version>2.3.28</freemarker.version>
@@ -84,15 +83,15 @@
 
         <!-- about logger -->
         <logback.version>1.2.3</logback.version>
-        <slf4j.version>1.7.26</slf4j.version>
+        <slf4j.version>1.7.30</slf4j.version>
 
 
         <!-- about json -->
-        <jackson.version>2.9.8</jackson.version>
-        <fastjson.version>1.2.56</fastjson.version>
+        <jackson.version>2.9.10</jackson.version>
+        <fastjson.version>1.2.62</fastjson.version>
         <!-- about xml -->
         <dom4j.version>1.6.1</dom4j.version>
-        <xstream.version>1.4.10</xstream.version>
+        <xstream.version>1.4.11.1</xstream.version>
         <jdom2.version>2.0.6</jdom2.version>
         <!-- about web -->
         <spring-js.version>2.4.8.RELEASE</spring-js.version>
@@ -104,18 +103,17 @@
         <el-api.version>3.0.0</el-api.version>
         <resteasy.version>3.0.26.Final</resteasy.version>
         <!-- about other -->
-        <aspectj.version>1.8.13</aspectj.version>
-        <cglib.version>3.2.5</cglib.version>
+        <aspectj.version>1.8.14</aspectj.version>
+        <cglib.version>3.2.12</cglib.version>
         <assertj.version>1.6.1</assertj.version>
-        <quartz.version>2.3.1</quartz.version>
-        <validation-api.version>1.1.0.Final</validation-api.version>
-        <hibernate-validator.version>5.4.2.Final</hibernate-validator.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+        <hibernate-validator.version>6.0.18.Final</hibernate-validator.version>
 
         <!-- about email -->
         <javax.mail-api.version>1.6.2</javax.mail-api.version>
         <greenmail.version>1.5.9</greenmail.version>
 
-        <cache-api.version>1.1.0</cache-api.version>
+        <cache-api.version>1.1.1</cache-api.version>
         <!-- about test -->
         <selenium.version>3.4.0</selenium.version>
         <junit.version>4.12</junit.version>
@@ -310,16 +308,6 @@
                 <groupId>org.hibernate.ogm</groupId>
                 <artifactId>hibernate-ogm-core</artifactId>
                 <version>${hibernate-ogm.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-search-engine</artifactId>
-                <version>${hibernate-search.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-search-orm</artifactId>
-                <version>${hibernate-search.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
@@ -715,23 +703,6 @@
                 <artifactId>jdom2</artifactId>
                 <version>${jdom2.version}</version>
             </dependency>
-            <!-- TIMER -->
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz</artifactId>
-                <version>${quartz.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.mchange</groupId>
-                        <artifactId>c3p0</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz-jobs</artifactId>
-                <version>${quartz.version}</version>
-            </dependency>
             <!-- SOAP begin -->
             <dependency>
                 <groupId>org.apache.cxf</groupId>
@@ -870,7 +841,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.6</version>
+                <version>1.18.10</version>
                 <scope>provided</scope>
             </dependency>
             <!-- validator -->
@@ -1104,13 +1075,13 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.3</version>
+                    <version>3.0.0-M1</version>
                 </plugin>
                 <!-- uncode getter and setter -->
                 <plugin>
                     <groupId>org.projectlombok</groupId>
                     <artifactId>lombok-maven-plugin</artifactId>
-                    <version>1.18.6.0</version>
+                    <version>1.18.10.0</version>
                     <executions>
                         <execution>
                             <phase>generate-sources</phase>
@@ -1124,7 +1095,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.6.1</version>
+                    <version>3.8.1</version>
                     <configuration>
                         <source>${jdk.version}</source>
                         <target>${jdk.version}</target>
@@ -1136,7 +1107,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.20</version>
+                    <version>2.22.2</version>
                     <configuration>
                         <argLine>-Xmx512M -Dtest.groups=${test.groups}</argLine>
                         <testFailureIgnore>false</testFailureIgnore>
@@ -1151,7 +1122,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.20</version>
+                    <version>2.22.2</version>
                     <executions>
                         <execution>
                             <id>integration-test</id>
@@ -1189,7 +1160,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.2.3</version>
                     <configuration>
                         <warName>${project.artifactId}</warName>
                     </configuration>
@@ -1199,7 +1170,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <encoding>${project.build.sourceEncoding}</encoding>
                     </configuration>
@@ -1209,7 +1180,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.0.2</version>
+                    <version>3.2.0</version>
                     <configuration>
                         <archive>
                             <manifest>
@@ -1227,21 +1198,21 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.2.1</version>
                 </plugin>
 
                 <!-- clean插件 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.0</version>
                 </plugin>
 
                 <!-- install插件 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
+                    <version>3.0.0-M1</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
@@ -1284,12 +1255,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.1.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>2.7</version>
                 </plugin>
 
                 <!-- ant插件 -->
@@ -1303,7 +1274,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.2.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -1323,8 +1294,8 @@
         </repository>
 
         <repository>
-            <id>aliyun-nexus</id>
-            <name>aliyun-nexus</name>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
